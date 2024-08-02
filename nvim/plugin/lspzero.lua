@@ -10,4 +10,7 @@ lsp_zero.default_keymaps({buffer=bufnr})
 end)
 
 require('lspconfig').lua_ls.setup({})
+require('lspconfig').zls.setup({})
+
+
 
