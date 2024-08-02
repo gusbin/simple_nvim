@@ -15,9 +15,16 @@ if fn.has('termguicolors') then
 end
 
 -- See :h <option> to see what the options do
-
+-- colorscheme
+vim.cmd('colorscheme nightfox')
 -- Search down into subfolders
 opt.path = vim.o.path .. '**'
+
+-- Gusbin specific keybinds and settings
+vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
+-- Map Ctrl-S to save and exit insert mode
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>", { noremap = true })
+vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true })
 
 opt.number = true
 opt.relativenumber = true
